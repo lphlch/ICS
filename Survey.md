@@ -1,9 +1,0 @@
-
-With the development of 5G network and the promotion of online office, cloud storage is used more and more. At the same time, the integrity and security of cloud storage in transmission and storage has become a growing focus.
-随着5G网络的发展和云办公的推广，云存储被越来越多地使用。与此同时，云存储在传输和存储时的完整性、安全性问题也成了一个日渐关注的焦点。
-
-Y. Zhang, C. Xu, X. Lin and X. Shen proposed a certificateless public verification scheme against procrastinating auditors (CPVPA) in "Blockchain-Based Public Integrity Verification for Cloud Storage against Procrastinating Auditors", by using blockchain technology. And present proofs to demonstrate the security of CPVPA.
-张勇、徐春春、林克强和沈克强在“云存储防拖延审计师区块链公共完整性验证”中，利用区块链技术，提出了一种无证书防拖延审计师公共验证方案（CPVPA），并给出了严格的安全证明，以证明CPVPA的安全性。
-
-In order to avoid high verification cost and information leaks in Searchable Symmetric Encryption (SSE)(which is an important cloud security technique, allowing users to retrieve the encrypted data from the cloud and verify the validity of the results.), X. Ge et al. designed a novel Accumulative Authentication Tag (AAT) in "Towards Achieving Keyword Search over Dynamic Encrypted Cloud Data with Symmetric-Key Based Verification", based on the symmetric-key cryptography. J. Li et al put forward the concept of "forward search privacy" in "Searchable Symmetric Encryption with Forward Search Privacy", which requires not leaking any information about past queriessearch when searching for newly added documents. They also proposed a new SSE scheme called Khons, and proofed its efficiency by experimenting on wiki.
-为了避免可搜索对称加密（SSE）（这是一种重要的云安全技术，允许用户从云中检索加密数据并验证结果的有效性）中的高验证成本和信息泄漏，X.Ge等人在“通过基于对称密钥的验证在动态加密云数据上实现关键字搜索”，基于对称密钥加密，J.Li等人在“具有前向搜索隐私的可搜索对称加密”中提出了“前向搜索隐私”的概念“，这要求在搜索新添加的文档时不泄漏有关过去查询搜索的任何信息。他们还提出了一个名为Khons的新SSE方案，并通过在wiki上进行实验证明了其有效性。

@@ -1,0 +1,102 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage[style=numeric,sorting=none]{biblatex}
+% \bibliography{reference.bib}
+\addbibresource{reference.bib}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+    
+\begin{document}
+
+\title{Modern Cryptography and Security:an Overview}
+
+\author{\IEEEauthorblockN{1\textsuperscript{st} Yunwei Zhu}
+% \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+% \textit{name of organization (of Aff.)}\\
+% City, Country \\
+% email address or ORCID}
+\and
+\IEEEauthorblockN{2\textsuperscript{nd} Pinhao Lyu}
+\and
+\IEEEauthorblockN{3\textsuperscript{rd} Mingqi Lu}
+\and
+\IEEEauthorblockN{4\textsuperscript{th} Weixun Wan}
+\and
+\IEEEauthorblockN{5\textsuperscript{th} Xinyu Zheng}
+\and
+\IEEEauthorblockN{6\textsuperscript{th} Xinrui Wang}
+\and
+\IEEEauthorblockN{7\textsuperscript{th} Tiancheng Wu}
+}
+\maketitle
+
+\begin{abstract}
+Cryptography and Security is one of the most important research topics in Computer Science with a history as long as the computer science itself. In this paper, we made a survey on both cryptography and security,covering a wide range of cutting edge topics in this field. Through widely reading the most recently published paper in both top conferences and journals, we get a basic grasp of the development, current situation and future prospect of each topic. This paper can work as a guide for researchers in security to understand the most advanced development. 
+\end{abstract}
+
+\begin{IEEEkeywords}
+security,cryptography,quantum cryptography,asymmetric, cloud security
+
+\end{IEEEkeywords}
+\section{Introduction}
+Cryptography and Security has long been a topic of interest since the birth of the first computer. As technology develops, the topic of cybersecurity has grown from a leisure for hackers into something everyone one this planet will encounter everyday. Growing concern as well as emphasis are put on security. Meanwhile, the topics that security covers also increase from merely cyber-security to all kinds of derivatives like quantum security, lot(Internet of things) and cloud security etc. During this process, a thriving pattern exists, indicating there's much to discover and create in this seemingly ancient field. 
+
+In this paper, our group members read widely in all topics of cryptography and security, covering both traditional and relatively novel ones. In each topic, we will cover the development, the current research situations and the future prospect to offer readers a better inspection in terms of the depth of time. All the papers we read are carefully selected from top conferences and journals so that these papers have greater authority.   
+
+\section{Cryptography}
+Cryptography, with its name implying "secret writing" in Greek, is undoubtedly the basis of computer security. Basically, cryptography algorithms can be divided into two parts: symmetric and asymmetric. There are many renowned algorithms in each of them, like RC4(symmetric) and RSA(asymmetric). Meanwhile, the idea of quantum computation and quantum security offered much variance and energy to cryptography, leading to a brand new form. In this paper, we cover mainly the asymmetric algorithm an quantum  cryptography in theory and key distribution management in application.
+
+\subsection{Quantum Cryptography}
+\par Quantum cryptography is a brand-new method for safe cryptography compared to traditional ones which exploits quantum mechanical properties to ensure an absolute secure encryption and decryption. The study of quantum cryptography began as early as 1970s when Stephen Wiesner and Gilles Brassard first introduce the concept of quantum conjugate coding in their paper. 
+\par Currently, studies in quantum cryptography cover both theory and various applications. Quantum key distribution(QKD) is one of the best known applications in this field. Other research topic include bounded and noisy-quantum-storage model and device-independent quantum cryptography. In 2020, Ajay Kumar et al.\cite{ajay} carried out an in-depth survey of various quantum cryptographic protocols along with recent advances to help other researchers grasp a big picture and apply existing tools better. He concludes that recent researches in quantum cryptography are focused on application on portable devices, QKD and cloud security.
+\par The quick development of quantum computing and cryptography also poses certain threat to traditional methods for encryption. M.Strand et al. \cite{strand}discussed about a status update on quantum safe cryptography. In his paper, various key submission strategies are dicussed and compared covering all kinds of families including general encoding, multivariate euqations,hash functions etc.
+
+\subsection{Asymmetric Cryptographic Algorithm}
+W. Diffie and M. Hellman published an article "New Direction in Cryptography" in IEEE Trans.on Information in 1976, and proposed the concept of "asymmetric cryptography, that is, public key cryptography," thus creating a new field of cryptography research.
+
+The RSA algorithm proposed in 1977 is still the most widely used algorithm at present. The RSA algorithm is based on the hard-to-decompose feature of large prime numbers. At the same time, the ECC algorithm based on elliptic curve is also emerging. For example, in 2021, Yehuda Lindell\cite{wwx-1} construct a protocol that is approximately two orders of magnitude faster than the previous best considering the specific case of two parties (and thus no honest majority).
+
+In terms of the encryption and decryption speed of the private key, the ECC algorithm is faster than the RSA, the storage space is smaller, and the bandwidth requirement is lower. In a certain period of time, RSA will still occupy the mainstream, but the ECC algorithm will gradually occupy an important position. The recently updated ECDSA algorithm and schnorr algorithm also prove this point.
+\subsection{Key Distribution and Management}
+Cryptographic key distribution and management is one of the most important steps in the process of securing data by utilizing encryption. The development of encryption has three stages. In the first stage, the security of data mainly depends on the confidentiality of the algorithm. In the second stage,it mainly depends on the confidentiality of the key. In the third stage, great achievements have been made in data encryption, and keyless transmission is supported between communication parties. 
+
+While encryption is powerful at protecting information, it critically relies upon the mystery/private cryptographic key’s security. Poor key management would compromise any robust encryption algorithm. So Mohammed Y.AL-Darwei\cite{LMQ} aims to secure such keys from unauthorized access. KeyShield is a scalable and quantum-safe key management scheme. It relies on the impossibility of finding a unique solution to an underdetermined linear system of equations. KeyShield achieves the rekeying using a single broadcast message, called a secure lock, in an open channel rather than pairwise secure channels. 
+
+At present, how to implement the key security scheme against CPU hardware security vulnerabilities is still an important technical challenge, which is still worthy of our continual efforts in the future.
+
+\subsection{Combinations with Cryptography}
+\par With the in-depth development of cryptography, elements from other fields are incorporated. Visual cryptography, VC in short, is first introduced by Naor and Shadmir\cite{wxr-1}, and has evolved into over 40 schemes within the past two decades(e.g., Progressive VC (PVC) by Fang\cite{wxr-2}, Hierarchical VC (HVC) by Chavan and Atique\cite{wxr-3}). During encryption, VC algorithm splits a secret image into noisy shares so that effective visual information can’t be directly obtained by humans. Another combination occurred in neural networks and cryptography, which created neuro-cryptology. Kinzel and Kanter\cite{wxr-4} used the synchronization nature of Bidirectional Learning and realizes the process of public channel key agreement based on neural network, which means common sense of neuro-cryptology coming out. Although this is not a mainstream field, many developments have sprung up in recent years. GE Zhao-Cheng and HU Han-Ping\cite{wxr-5} summarized some of them.
+\par The world of cryptography is always complicated, for which computer-aided strategies have come into being. Manuel Barbosa and others\cite{wxr-6} reviewed the advantages and challenges of computer-aided cryptography. For design-level, tools can detect flaws and manage the complexity of proofs; for functional correctness and efficiency,  program verification is always needed; for implementation-level, tools can check implementation according to meets given and even automatically repair it. However, computer-aided tools have also faced with tricky mathematical reasoning and maintainable problems, which appeals to more participants.
+
+\section{Security}
+The importance of security can't be too emphasized. Currently, novel topics like the Internet of things and cloud computing are attracting more and more researchers. Also, quantum security is again changing the tradition ideas and concepts about security. Algorithms that are once safe may not be in the future. In this section, we focus on cloud related security issues as well as defense against attacks. 
+\subsection{Cloud Security}
+With the development of 5G network and the promotion of online office, cloud storage is used more and more. At the same time, the integrity and security of cloud storage in transmission and storage has become a growing focus.
+
+Y. Zhang, C. Xu, X. Lin and X. Shen(2021) proposed a certificate-less public verification scheme against procrastinating auditors (CPVPA) in "Blockchain-Based Public Integrity Verification for Cloud Storage against Procrastinating Auditors"\cite{LPH-1}, by using block-chain technology. And present proofs to demonstrate the security of CPVPA.
+
+In order to avoid high verification cost and information leaks in Searchable Symmetric Encryption (SSE)(which is an important cloud security technique, allowing users to retrieve the encrypted data from the cloud and verify the validity of the results.), X. Ge et al.(2021) designed a novel Accumulative Authentication Tag (AAT) in "Towards Achieving Keyword Search over Dynamic Encrypted Cloud Data with Symmetric-Key Based Verification"\cite{LPH-2}, based on the symmetric-key cryptography. J. Li et al.(2021) put forward the concept of "forward search privacy" in "Searchable Symmetric Encryption with Forward Search Privacy"\cite{LPH-3}, which requires not leaking any information about past queries when searching for newly added documents. They also proposed a new SSE scheme called Khons, and proofed its efficiency by experimenting on wiki.
+\subsection{Defense and Attacks}
+Attacks and defense are the two sides of the coin. Attacks stand for those malicious activities aimed at stealing critical information on our computer. Attackers can be everywhere, not only from the Internet, but also a server host hypervisor, a domain owner, even a set of precise training data for a neural network. It is a must for us to acknowledge where attacks come from.
+
+AMD SEV technology, originally used to protect memory data by encryption, has been reported a side-attack vulnerability, mentioned in \cite{usenix:li}. Attackers take advantage of the memory read access and the fact that encryptions are specified per 16-bit memory block. With this advantages, server hypervisor can recover plaintext private keys and perform such side-attack on RSA or ECDSA algorithms. This could only be fixed in the hardware level. Also, subdomain security problems are easily ignored even for the top sites, mentioned in \cite{usenix:squarcina}. Subdomain attackers not only steal shared cookies, but also play deceptively on the client side. Many other critical risks are also mentioned and warned in this latest article. Besides, deep neural networks are also vulnerable to adversarial data examples \cite{acm:honeypot}. Mitigating and obfuscating training data must be recognized in advance and ignored to avoid further impacts. 
+
+Attacks always come from an unexpected way. In the visible future, those mentioned types of attack will still exist, and new attacks will inevitably focus on IoT devices, which are running with limited hardware resources while are meant to prevent the most complex attack perspectives. Security remains a big problem, while the defenses will only become more difficult. 
+\subsection{Security In Mobile Cloud Computing}
+As computing technologies have grown rapidly in the past few decades,cloud computing has been well popularized among many fileds.For example,It is mainly applied in medicine, manufacturing, finance, energy, e-government ,education and many others.Also,smart mobile devices like smartphones and tablets are gradually entering our lives,which bring us great convenience.The integration of cloud computing with mobile phones is known as Mobile Cloud Computing (MCC).\cite{zxy-1}
+
+Mobile Cloud Computing(MCC) which combines mobile computing and cloud computing,has become one of the important element in the industry and a major discussion in the IT world since 2009.\cite{zxy-2} Cloud computing provides the most reliable and secure data storage center,users no longer need to worry about data loss, virus intrusion and other troubles, it has the lowest requirements on user equipment and is convenient to use,it can extend battery lifetime.Nowadays,MCC has been applied to many applications,such as Google Gmail. But it still has not received the widespread attention and application it deserves,because it still has many problems in terms of safety.The security protection of mobile cloud computing is more complicated than that of traditional cloud computing. The main reason is that the access location of mobile terminals is flexible, the number of concurrent accesses is greater, and mobile devices are more prone to loss and leakage.
+
+Mobile cloud computing is one of the major trends in the development of mobile technology in the future. To enable MCC to be more widely used, it is necessary to solve some of the current problems: data security and privacy issues, limited bandwidth, unreliable networks, etc.The researchers needs to explore futher architecture that are possible,adequate security measures have to be incorporated to support the low processing ability at the client-side.\cite{zxy-2} 
+
+
+\printbibliography
+\end{document}

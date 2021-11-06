@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{USER NAME SPACE}</title>
+    {%block title%}
+    <title>{USER NAME SPACE}</title>
+    {% endblock %}
+
 <!-- Bootstrap -->
+    {% block style %}
 <link href="css/bootstrap-4.4.1.css" rel="stylesheet" >
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<style type="text/css">
-.level {
-}
-</style>
 <link href="css/space.css" rel="stylesheet" type="text/css">
+    {% endblock %}
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light"> <a class="navbar-brand" href="#">{Website Name}</a>
@@ -44,7 +44,7 @@
   <hr>
   <div class="row">
     <div class="col-md-8 col-sm-12 col-lg-6">
-      <div class="media"> <img class="mr-3 mt-2 " src="images/115X115.gif" alt="User photo">
+      <div class="media"> {% block userPhotoPath %}<img class="mr-3 mt-2 " src="images/115X115.gif" alt="User photo">{% endblock %}
         <div class="media-body">
           <h5 class="mt-2"><img class="small-icon mr-1" src="images/id.svg" alt="ID icon">{% block userID %}{% endblock %}{% block userVIP %}{% endblock %}</h5>
           <div class="progress mt-2"> 

@@ -34,36 +34,37 @@
     </form>
   </div>
 </nav>
-<div class="container">
+<div class="container"> {% block user %}
   <hr>
   <div class="row">
     <div class="col-6 col-lg-12">
-      <h1>{UserName}</h1>
+      <h1>{% block userNickName %}{% endblock %}</h1>
     </div>
   </div>
   <hr>
   <div class="row">
     <div class="col-md-8 col-sm-12 col-lg-6">
-      <div class="media"> <img class="mr-3 mt-1" src="images/115X115.gif" alt="User photo">
+      <div class="media"> <img class="mr-3 mt-2 " src="images/115X115.gif" alt="User photo">
         <div class="media-body">
-          <h5 class="mt-2"><img class="small-icon mr-1" src="images/id.svg" alt="ID icon">{User ID}<span class="badge badge-secondary ml-2">{Not VIP}</span><span class="badge badge-success ml-2">{Is VIP}</span></h5>
+          <h5 class="mt-2"><img class="small-icon mr-1" src="images/id.svg" alt="ID icon">{% block userID %}{% endblock %}{% block userVIP %}{% endblock %}</h5>
           <div class="progress mt-2"> 
-            <!-- level at style % -->
+            <!-- level at style % --> 
+            {% block userLevel %}
             <div class="progress-bar bg-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"  > {User Level}</div>
-          </div>
-          <h5 class="mt-2"><img class="small-icon mr-1" src="images/coin.svg" alt="Coin icon">{User Coins}</h5>
-          <h5 class="mt-2"><img class="small-icon mr-1" src="images/star.svg" alt="Star icon">{User Stars}</h5>
+            {% endblock %} </div>
+          <h5 class="mt-2"><img class="small-icon mr-1" src="images/coin.svg" alt="Coin icon">{% block userCoins %}{% endblock %}</h5>
+          <h5 class="mt-2"><img class="small-icon mr-1" src="images/star.svg" alt="Star icon">{% block userStars %}{% endblock %}</h5>
         </div>
       </div>
     </div>
     <div class="col-md-4 col-sm-12 col-lg-6">
-      <p class="mt-1">{Presonal Introduction}</p>
+      <p class="mt-1">{% block userIntroduction %}{% endblock %}</p>
     </div>
   </div>
   <hr>
   <div class="row">
     <div class="col-md-6 col-sm-12">
-      <h2>{TO BE FILLED LOL}</h2>
+      <h2>{TO BE FILLED :P}</h2>
       <hr>
       <div class="row">
         <div class="col-6">
@@ -75,11 +76,11 @@
       </div>
     </div>
     <div class="col-md-6 col-sm-12">
-      <h2>{Favourite Video}</h2>
+      <h2>Favourite Video</h2>
       <hr>
       <ul class="list-unstyled">
         <li class="media">
-          <div class="media-body"> 
+          <div class="media-body"> {% block userFavouriteVideos %} 
             <!-- Nested media object -->
             <div class="media"> <img class="d-flex mr-3" src="images/MediaObj_Placeholder.png" alt="placeholder image">
               <div class="media-body">
@@ -94,7 +95,7 @@
                 <h5 class="mt-0">{Video2 Name}</h5>
                 {Video2 Information} </div>
             </div>
-          </div>
+            {% endblock %} </div>
         </li>
       </ul>
     </div>
@@ -109,7 +110,8 @@
       </div>
     </div>
   </footer>
-</div>
+  {% endblock %} </div>
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 <script src="js/jquery-3.4.1.min.js"></script> 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 

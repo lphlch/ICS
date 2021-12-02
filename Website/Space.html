@@ -38,8 +38,14 @@
 <div class="container"> {% block user %}
   <hr>
   <div class="row">
-    <div class="col-6 col-lg-12">
+    <div class="col-6 col-lg-12 col-xl-10">
       <h1>{% block userNickName %}{% endblock %}</h1>
+    </div>
+    <div class="col-2">
+        <form>
+              {{ form.submit(class='ml-4 mt-2 btn btn-info') }}
+        </form>
+      <button type="button" class="">Edit Profile</button>
     </div>
   </div>
   <hr>

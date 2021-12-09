@@ -51,7 +51,7 @@
   <hr>
   <div class="row">
     <div class="col-md-8 col-sm-12 col-lg-6">
-      <div class="media"> {% block userPhotoPath %}<img class="mr-3 mt-2 " src="images/115X115.gif" alt="User photo">{% endblock %}
+      <div class="media"> <img class="mr-3 mt-2 " src="images/115X115.gif" alt="User photo">
         <div class="media-body">
           <h5 class="mt-2"><img class="small-icon mr-1" src="images/id.svg" alt="ID icon">{% block userID %}{% endblock %}{% block userVIP %}{% endblock %}</h5>
           <div class="progress mt-2"> 
@@ -71,16 +71,26 @@
   <hr>
   <div class="row">
     <div class="col-md-6 col-sm-12">
-      <h2>{TO BE FILLED :P}</h2>
+      <h2>Person Information</h2>
       <hr>
+        {% block userProfile %}
       <div class="row">
-        <div class="col-6">
-          <h4>{XXX}</h4>
+        <div class="col-6 col-xl-4">
+          <h4>Email</h4>
         </div>
-        <div class="col-6">
-          <h5 class="text-right"><span aria-hidden="true"></span> {XXX}</h5>
+        <div class="col-6 col-xl-8">
+          <h5 class="text-right"><span aria-hidden="true"></span>233@sbsb.com</h5>
         </div>
       </div>
+        <div class="row">
+        <div class="col-6 col-xl-4">
+          <h4>Phone</h4>
+        </div>
+        <div class="col-6 col-xl-8">
+          <h5 class="text-right"><span aria-hidden="true"></span>13912345678</h5>
+        </div>
+      </div>
+        {% endblock %}
     </div>
     <div class="col-md-6 col-sm-12">
       <h2>Favourite Video</h2>
